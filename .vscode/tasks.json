@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Probar envío de correo automático",
+			"type": "shell",
+			"command": "node -e \"require('./src/services/emailService').sendMail({to: 'blasrangel1995@gmail.com', subject: 'Prueba LabWise', text: 'Este es un correo de prueba automático desde LabWise.'}).then(console.log).catch(console.error)\"",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

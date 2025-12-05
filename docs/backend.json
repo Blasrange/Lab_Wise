@@ -1,0 +1,280 @@
+{
+  "entities": {
+    "Equipment": {
+      "title": "Equipment",
+      "description": "Represents a piece of laboratory equipment.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "instrument": { "type": "string" },
+        "internalCode": { "type": "string" },
+        "brand": { "type": "string" },
+        "model": { "type": "string" },
+        "serialNumber": { "type": "string" },
+        "systemNumber": { "type": "string" },
+        "lastExternalCalibration": { "type": "string", "format": "date" },
+        "nextExternalCalibration": { "type": "string", "format": "date" },
+        "externalCalibrationPeriodicity": { "type": "string" },
+        "internalCheckPeriodicity": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Operational",
+            "In_Repair",
+            "Decommissioned",
+            "Needs_Calibration",
+            "Activos"
+          ]
+        },
+        "imageUrl": { "type": "string", "format": "uri" },
+        "imageHint": { "type": "string" },
+        "qrToken": { "type": "string" }
+      },
+      "required": [
+        "instrument",
+        "internalCode",
+        "brand",
+        "model",
+        "serialNumber",
+        "status"
+      ]
+    },
+    "EquipmentHistory": {
+      "title": "Equipment History",
+      "description": "Represents a single maintenance or history event for a piece of equipment.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "equipmentId": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "scheduledDate": { "type": "string", "format": "date-time" },
+        "action": { "type": "string" },
+        "maintenanceType": {
+          "type": "string",
+          "enum": ["Preventivo", "Correctivo", "Predictivo", "Otro"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Programado", "En_Proceso", "Completado", "Cancelado"]
+        },
+        "responsible": { "type": "string" },
+        "user": { "type": "string" },
+        "priority": { "type": "string", "enum": ["baja", "media", "alta"] },
+        "description": { "type": "string" }
+      },
+      "required": [
+        "equipmentId",
+        "date",
+        "scheduledDate",
+        "action",
+        "status",
+        "responsible",
+        "maintenanceType"
+      ]
+    },
+    "NotificationLog": {
+      "title": "Notification Log",
+      "description": "Represents a log of a sent email notification.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the log entry."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the log was created."
+        },
+        "notificationType": {
+          "type": "string",
+          "description": "The type of notification (e.g., 'calibration_due', 'maintenance_reminder')."
+        },
+        "equipmentName": {
+          "type": "string",
+          "description": "Name of the equipment related to the notification."
+        },
+        "equipmentInternalCode": {
+          "type": "string",
+          "description": "Internal code of the related equipment."
+        },
+        "subject": {
+          "type": "string",
+          "description": "The subject line of the sent email."
+        },
+        "recipients": {
+          "type": "array",
+          "items": { "type": "string", "format": "email" },
+          "description": "List of email addresses the notification was sent to."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Sent", "Failed"],
+          "description": "The status of the email sending attempt."
+        },
+        "sentAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the email was actually sent."
+        },
+        "emailResult": {
+          "type": ["string", "object", "null"],
+          "description": "Resultado del envío de correo: puede contener el estado (emailStatus) y/o el error (emailError), o null si todo está ok."
+        }
+      },
+      "required": [
+        "id",
+        "createdAt",
+        "notificationType",
+        "subject",
+        "recipients",
+        "status",
+        "sentAt"
+      ]
+    },
+    "NotificationSetting": {
+      "title": "Notification Setting",
+      "description": "Stores the configuration for a specific type of notification.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "description": "Unique identifier for the notification type (e.g., 'calibration_due')."
+        },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "daysBefore": { "type": "number" },
+        "recipients": {
+          "type": "array",
+          "items": { "type": "string", "format": "email" }
+        },
+        "isActive": { "type": "boolean" }
+      },
+      "required": [
+        "id",
+        "type",
+        "title",
+        "description",
+        "recipients",
+        "isActive"
+      ]
+    },
+    "User": {
+      "title": "User",
+      "description": "Represents a user in the system.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "name": { "type": "string", "description": "The user's full name." },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The user's email address."
+        },
+        "password": { "type": "string", "description": "The user's password." },
+        "role": {
+          "type": "string",
+          "enum": ["Admin", "Supervisor", "Technician"],
+          "description": "The user's role."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Inactive"],
+          "description": "The user's status."
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the user's avatar image."
+        },
+        "documentType": {
+          "type": "string",
+          "description": "Type of identification document.",
+          "enum": ["CC", "TI", "CE", "Pasaporte"]
+        },
+        "documentNumber": {
+          "type": "string",
+          "description": "The user's identification document number."
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "password",
+        "role",
+        "status",
+        "documentType",
+        "documentNumber"
+      ]
+    },
+    "ActivityLog": {
+      "title": "Activity Log",
+      "description": "Represents a log of a significant action performed in the system.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "user": {
+          "type": "string",
+          "description": "Name of the user who performed the action"
+        },
+        "actionType": {
+          "type": "string",
+          "enum": [
+            "USER_CREATED",
+            "USER_UPDATED",
+            "USER_STATUS_TOGGLED",
+            "EQUIPMENT_CREATED",
+            "EQUIPMENT_UPDATED",
+            "MAINTENANCE_SCHEDULED",
+            "MAINTENANCE_STATUS_UPDATED",
+            "SYSTEM_ERROR",
+            "PASSWORD_RESET_REQUEST"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "A human-readable description of the action."
+        },
+        "details": {
+          "type": "object",
+          "description": "An object containing additional context-specific data."
+        }
+      },
+      "required": ["id", "timestamp", "user", "actionType", "description"]
+    }
+  },
+  "auth": {
+    "providers": []
+  },
+  "firestore": {
+    "/equipment/{equipmentId}": {
+      "schema": { "$ref": "#/entities/Equipment" },
+      "description": "Stores individual equipment documents."
+    },
+    "/equipment-history/{historyId}": {
+      "schema": { "$ref": "#/entities/EquipmentHistory" },
+      "description": "Stores maintenance and event history for a specific piece of equipment."
+    },
+    "/notification-logs/{logId}": {
+      "schema": { "$ref": "#/entities/NotificationLog" },
+      "description": "Stores logs of sent email notifications."
+    },
+    "/notification-settings/{settingId}": {
+      "schema": { "$ref": "#/entities/NotificationSetting" },
+      "description": "Stores the configuration for each type of notification."
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Stores individual user profile documents."
+    },
+    "/activity-logs/{logId}": {
+      "schema": { "$ref": "#/entities/ActivityLog" },
+      "description": "Stores system-wide activity and audit trail logs."
+    }
+  }
+}

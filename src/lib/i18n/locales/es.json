@@ -1,0 +1,534 @@
+{
+  "home": {
+    "title": "LabWise",
+    "subtitle": "Sistema de Gestión de Equipos de Laboratorio",
+    "description": "Gestione su equipo de laboratorio con eficiencia y precisión. Realice un seguimiento del inventario, programe el mantenimiento y garantice el cumplimiento de la calibración con facilidad.",
+    "dashboard_button": "Entrar al Panel"
+  },
+  "login": {
+    "welcome_title": "¡Bienvenido de Nuevo!",
+    "description": "Por favor, ingrese sus credenciales para acceder a su cuenta.",
+    "email_label": "Correo Electrónico",
+    "email_placeholder": "tu@tuempresa.com",
+    "password_label": "Contraseña",
+    "error_title": "Fallo de Inicio de Sesión",
+    "login_button": "Iniciar Sesión",
+    "remember_me": "Recordarme",
+    "errors": {
+      "invalid_credentials": "El correo electrónico o la contraseña que ingresaste son incorrectos. Por favor, inténtalo de nuevo."
+    },
+    "toast": {
+      "success_title": "Inicio de Sesión Exitoso",
+      "success_description": "¡Bienvenido de nuevo, {name}!"
+    }
+  },
+  "loading": {
+    "text": "Cargando"
+  },
+  "layout": {
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "logout": "Cerrar sesión"
+  },
+  "sidebar": {
+    "dashboard": "Panel",
+    "equipment": "Equipos",
+    "notifications": "Notificaciones",
+    "users": "Usuarios",
+    "history": "Historial"
+  },
+  "breadcrumbs": {
+    "dashboard": "Panel",
+    "equipment": "Equipos",
+    "notifications": "Notificaciones",
+    "users": "Usuarios",
+    "import": "Importar",
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "history": "Historial"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "description": "Resumen del estado de los equipos de su laboratorio.",
+    "total_equipment": "Equipos Totales",
+    "maintenance_due": "Mantenimiento Vence",
+    "calibration_due": "Calibración Vence",
+    "in_repair": "En Reparación",
+    "recent_activity": "Actividad Reciente",
+    "smart_alert_tool": {
+      "title": "Herramienta de Alerta Inteligente",
+      "description": "Use IA para analizar datos de equipos y obtener recomendaciones proactivas de mantenimiento.",
+      "select_equipment": "Seleccionar Equipo",
+      "select_placeholder": "Elija un equipo para analizar...",
+      "run_analysis": "Ejecutar Análisis IA",
+      "analyzing": "Analizando...",
+      "error_title": "Análisis Fallido",
+      "error_description": "El análisis de IA no se pudo completar. Por favor, inténtelo de nuevo.",
+      "recommendation_title": "Recomendación de IA",
+      "recommendation": "Recomendación",
+      "urgency": "Urgencia",
+      "explanation": "Explicación",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    }
+  },
+  "equipment_page": {
+    "title": "Inventario de Equipos",
+    "description": "Gestione los equipos de su laboratorio.",
+    "add_button": "Añadir Equipo",
+    "export_button": "Exportar Excel",
+    "import_button": "Importar Excel",
+    "filter_placeholder": "Filtrar por instrumento...",
+    "status": "Estado",
+    "reset": "Reiniciar",
+    "view": "Ver",
+    "details_title": "Detalles",
+    "history_title": "Historial",
+    "history_for": "Historial para",
+    "columns": {
+      "instrumento": "Instrumento",
+      "codigoInterno": "Código Interno",
+      "marca": "Marca",
+      "modelo": "Modelo",
+      "numeroSerie": "Número de Serie",
+      "numeroSistema": "N° Sistema",
+      "toggle_columns": "Alternar columnas"
+    },
+    "status_options": {
+      "Operational": "Operativo",
+      "In-Repair": "En Reparación",
+      "Needs Calibration": "Necesita Calibración",
+      "Decommissioned": "Retirado",
+      "Activos": "Activos"
+    },
+    "history_status": {
+      "Programado": "Programado",
+      "En Proceso": "En Proceso",
+      "Completado": "Completado",
+      "Cancelado": "Cancelado"
+    },
+    "row_actions": {
+      "actions_label": "Acciones",
+      "edit": "Editar",
+      "view_history": "Ver Historial",
+      "schedule_maintenance": "Programar Mantenimiento",
+      "generate_qr": "Generar QR",
+      "delete": "Eliminar"
+    },
+    "no_results": "Sin resultados.",
+    "form": {
+      "edit_title": "Editar Equipo",
+      "edit_description": "Edite los detalles del equipo.",
+      "add_title": "Añadir Nuevo Equipo",
+      "add_description": "Añada un nuevo equipo al inventario.",
+      "last_ext_calibration_label": "Última Calibración Externa",
+      "next_ext_calibration_label": "Próxima Calibración Externa",
+      "periodicity_ext_calibration_label": "Periodicidad Calibración Externa",
+      "periodicity_int_check_label": "Periodicidad Chequeo Interno",
+      "status_label": "Estado",
+      "status_placeholder": "Seleccionar un estado",
+      "cancel": "Cancelar",
+      "save": "Guardar"
+    },
+    "toast": {
+      "update_title": "Equipo Actualizado",
+      "update_description": "El equipo \"{name}\" ha sido actualizado.",
+      "add_title": "Equipo Añadido",
+      "add_description": "El equipo \"{name}\" ha sido añadido al inventario."
+    },
+    "history_columns": {
+      "date": "Fecha",
+      "action": "Acción",
+      "status": "Estado",
+      "user": "Usuario"
+    }
+  },  
+  "notifications_page": {
+    "title": "Notificaciones",
+    "description": "Configure las notificaciones y vea el historial de envíos.",
+    "mark_all_read": "Marcar todo como leído",
+    "tabs": {
+      "settings": "Configuración",
+      "history": "Historial"
+    },
+    "settings": {
+      "configure_button": "Configurar",
+      "status_active": "Activo",
+      "status_inactive": "Inactivo",
+      "trigger_instant": "Instantáneamente",
+      "calibration_due": {
+        "title": "Calibración Próxima",
+        "description": "Notificación cuando una calibración externa está próxima a vencer."
+      },
+      "maintenance_reminder": {
+        "title": "Recordatorio Mantenimiento",
+        "description": "Recordatorio de mantenimientos programados."
+      },
+      "maintenance_completed": {
+        "title": "Mantenimiento Completado",
+        "description": "Notificación cuando se completa un mantenimiento."
+      },
+      "maintenance_overdue": {
+        "title": "Mantenimiento Vencido",
+        "description": "Notificación cuando un mantenimiento está vencido"
+      }
+    },
+    "history": {
+      "title": "Historial de Notificaciones Enviadas",
+      "description": "Una línea de tiempo visual de todas las notificaciones enviadas por el sistema.",
+      "sheet_name": "Registros de Notificaciones",
+      "view_button": "Ver Historial",
+      "columns": {
+        "id": "ID",
+        "createdAt": "Fecha Creación",
+        "notificationType": "Tipo de Notificación",
+        "equipmentName": "Equipo",
+        "equipmentInternalCode": "Código Interno",
+        "subject": "Asunto",
+        "recipients": "Destinatarios",
+        "status": "Estado",
+        "sentAt": "Fecha Envío",
+        "error": "Error"
+      },
+      "no_results": "Aún no hay registros de notificaciones.",
+      "no_results_desc": "Cuando se envíen notificaciones, aparecerán aquí."
+    }
+  },
+  "users_page": {
+    "title": "Gestión de Usuarios",
+    "description": "Gestione los usuarios y sus permisos.",
+    "add_button": "Añadir Usuario",
+    "columns": {
+      "user": "Usuario",
+      "document": "Documento",
+      "role": "Rol",
+      "status": "Estado"
+    },
+    "roles": {
+      "admin": "Admin",
+      "supervisor": "Supervisor",
+      "technician": "Técnico"
+    },
+    "status_options": {
+      "active": "Activo",
+      "inactive": "Inactivo"
+    },
+    "document_types": {
+      "CC": "Cédula de Ciudadanía",
+      "TI": "Tarjeta de Identidad",
+      "CE": "Cédula de Extranjería",
+      "Pasaporte": "Pasaporte"
+    },
+    "row_actions": {
+      "edit_profile": "Editar Perfil",
+      "reset_password": "Restablecer Contraseña",
+      "deactivate_user": "Desactivar Usuario",
+      "activate_user": "Activar Usuario"
+    },
+    "form": {
+      "edit_title": "Editar Usuario",
+      "edit_description": "Edite los detalles del usuario.",
+      "add_title": "Añadir Nuevo Usuario",
+      "add_description": "Añada un nuevo usuario y asígnele un rol.",
+      "name_label": "Nombre Completo",
+      "email_label": "Dirección de Correo",
+      "password_label": "Contraseña",
+      "password_placeholder_edit": "Dejar en blanco para mantener la actual",
+      "document_type_label": "Tipo de Documento",
+      "document_type_placeholder": "Seleccione un tipo de documento",
+      "document_number_label": "Número de Documento",
+      "role_label": "Rol",
+      "status_label": "Estado",
+      "role_placeholder": "Seleccione un rol",
+      "status_placeholder": "Seleccione un estado"
+    },
+    "toast": {
+      "update_title": "Usuario Actualizado",
+      "update_description": "El usuario \"{name}\" ha sido actualizado.",
+      "add_title": "Usuario Añadido",
+      "add_description": "El usuario \"{name}\" ha sido invitado al sistema.",
+      "reset_sent_title": "Correo de Restablecimiento Enviado",
+      "reset_sent_description": "Se ha enviado un correo a {email} con instrucciones.",
+      "reset_failed_title": "Error al Enviar Correo",
+      "reset_failed_description": "No se pudo enviar el correo de restablecimiento. Inténtelo de nuevo.",
+      "status_updated_title": "Estado de Usuario Actualizado",
+      "activated_description": "El usuario \"{name}\" ha sido activado.",
+      "deactivated_description": "El usuario \"{name}\" ha sido desactivado."
+    },
+    "reset_password_dialog": {
+      "title": "¿Seguro que quieres restablecer la contraseña?",
+      "description": "Esto enviará un correo de restablecimiento de contraseña a {email}. Esta acción no se puede deshacer.",
+      "confirm": "Enviar Correo"
+    },
+    "reset_password_email": {
+      "subject": "Solicitud de Restablecimiento de Contraseña",
+      "body": "Hola {name}, se ha solicitado un restablecimiento de contraseña para tu cuenta. Por favor, contacta a tu administrador para proceder."
+    },
+    "status_dialog": {
+      "activate_title": "¿Seguro que quieres activar este usuario?",
+      "activate_description": "Esto permitirá que el usuario {name} acceda nuevamente al sistema.",
+      "deactivate_title": "¿Seguro que quieres desactivar este usuario?",
+      "deactivate_description": "Esto impedirá que el usuario {name} acceda al sistema. Esta acción se puede deshacer."
+    }
+  },
+  "history_page": {
+    "title": "Historial del Sistema",
+    "description": "Registro de auditoría global de todas las actividades significativas en el sistema."
+  },
+  "profile_page": {
+    "title": "Mi Perfil",
+    "description": "Gestiona tu información personal y contraseña.",
+    "profile_details_title": "Detalles del Perfil",
+    "profile_details_desc": "Actualiza tu nombre y dirección de correo electrónico.",
+    "change_password_title": "Cambiar Contraseña",
+    "change_password_desc": "Por seguridad, debes proporcionar tu contraseña actual para cambiarla.",
+    "current_password_label": "Contraseña Actual",
+    "new_password_label": "Nueva Contraseña",
+    "confirm_password_label": "Confirmar Nueva Contraseña",
+    "update_password_button": "Actualizar Contraseña",
+    "validation": {
+      "current_password_required": "Se requiere la contraseña actual.",
+      "new_password_min_length": "La nueva contraseña debe tener al menos 6 caracteres.",
+      "passwords_do_not_match": "Las nuevas contraseñas no coinciden."
+    },
+    "toast": {
+      "profile_updated_title": "Perfil Actualizado",
+      "profile_updated_desc": "Tu información de perfil ha sido actualizada exitosamente.",
+      "password_updated_title": "Contraseña Actualizada",
+      "password_updated_desc": "Tu contraseña ha sido cambiada exitosamente.",
+      "incorrect_password_title": "Contraseña Incorrecta",
+      "incorrect_password_desc": "La contraseña actual que ingresaste es incorrecta."
+    }
+  },
+  "settings_page": {
+    "title": "Configuración",
+    "description": "Gestiona la configuración y las preferencias de la aplicación.",
+    "appearance": {
+      "title": "Apariencia",
+      "description": "Personaliza el aspecto de la aplicación."
+    },
+    "language": {
+      "title": "Idioma",
+      "description": "Elige tu idioma de preferencia."
+    },
+    "theme": {
+      "title": "Tema",
+      "description": "Cambia entre el modo claro y oscuro."
+    }
+  },
+  "data_table": {
+    "selected": "fila(s) seleccionada(s).",
+    "of": "de",
+    "rows_per_page": "Filas por página",
+    "page": "Página",
+    "total_rows": "Total {count} filas."
+  },
+  "maintenance_dialog": {
+    "step1": {
+      "title": "Tipos de Mantenimiento",
+      "description": "Selecciona el tipo de mantenimiento que deseas realizar"
+    },
+    "step2": {
+      "equipment_info_title": "Información del Equipo"
+    },
+    "categories": {
+      "preventivo": "Preventivo",
+      "correctivo": "Correctivo",
+      "predictivo": "Predictivo"
+    },
+    "types": {
+      "preventive_routine_title": "Mantenimiento Preventivo Rutinario",
+      "preventive_routine_desc": "Inspección y limpieza general del equipo",
+      "preventive_deep_title": "Mantenimiento Preventivo Profundo",
+      "preventive_deep_desc": "Revisión completa de componentes internos",
+      "cleaning_title": "Limpieza",
+      "cleaning_desc": "Limpieza profunda con protocolos específicos",
+      "calibration_title": "Calibración",
+      "calibration_desc": "Ajuste y verificación de precisión",
+      "repair_title": "Reparación",
+      "repair_desc": "Reparación de fallas o averías",
+      "validation_title": "Validación",
+      "validation_desc": "Verificación de cumplimiento normativo"
+    },
+    "priorities": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "statuses": {
+      "scheduled": "Programado",
+      "in_progress": "En Proceso",
+      "completed": "Completado",
+      "canceled": "Cancelado"
+    },
+    "buttons": {
+      "cancel_step1": "cancelar",
+      "cancel_step2": "cancelar",
+      "save": "Guardar Mantenimiento"
+    },
+    "form": {
+      "scheduling_title": "Programación",
+      "scheduled_date_label": "Fecha Programada",
+      "completion_date_label": "Fecha de Realización",
+      "responsibility_title": "Responsabilidad",
+      "responsible_person_label": "Persona Responsable",
+      "responsible_person_placeholder": "Nombre de la persona",
+      "priority_label": "Prioridad",
+      "priority_placeholder": "Seleccione prioridad",
+      "details_title": "Detalles del Mantenimiento",
+      "description_label": "Descripción",
+      "description_placeholder": "Describa el trabajo a realizar...",
+      "actual_cost_label": "Costo Real",
+      "actual_duration_label": "Duración Real (min)",
+      "status_label": "Estado",
+      "status_placeholder": "Seleccione estado",
+      "additional_notes_label": "Notas Adicionales",
+      "additional_notes_placeholder": "Añada notas o comentarios adicionales aquí...",
+      "validation": {
+        "scheduled_date_required": "Fecha programada es requerida.",
+        "responsible_person_required": "La persona responsable es requerida.",
+        "description_required": "La descripción es requerida."
+      }
+    },
+    "toast": {
+      "success_title": "Mantenimiento Programado",
+      "success_desc": "Se ha programado una nueva tarea de mantenimiento con éxito."
+    }
+  },
+  "qr_dialog": {
+    "title": "Código QR",
+    "scan_title": "Escanea para Gestionar Mantenimiento",
+    "scan_subtitle": "Código QR para acceso móvil al sistema de mantenimiento",
+    "generating": "Generando QR...",
+    "equipment_info_title": "Información del Equipo",
+    "instructions_title": "Instrucciones de Uso",
+    "instructions": {
+      "item1": "Escanea el código QR con tu dispositivo móvil",
+      "item2": "Accede a la interfaz de gestión de mantenimiento",
+      "item3": "Visualiza tareas programadas y en progreso",
+      "item4": "Actualiza estados de las tareas",
+      "item5": "Crea nuevas tareas de mantenimiento"
+    },
+    "buttons": {
+      "manage_tasks": "Gestionar Tareas",
+      "download": "Descargar PNG",
+      "print": "Imprimir",
+      "cancel": "Cancelar"
+    },
+    "errors": {
+      "download_title": "Error al Descargar",
+      "download_desc": "No se pudo descargar el código QR. Por favor, inténtelo de nuevo.",
+      "print_title": "Error al Imprimir",
+      "print_desc": "No se pudo imprimir el código QR. Por favor, inténtelo de nuevo."
+    },
+    "toast": {
+      "download_success_title": "Descarga Iniciada",
+      "download_success_desc": "El código QR se está descargando.",
+      "print_success_title": "Diálogo de Impresión Abierto",
+      "print_success_desc": "Se ha abierto el diálogo de impresión para el código QR."
+    }
+  },
+  "mobile_view": {
+    "header": {
+      "title": "Gestión de Equipos",
+      "subtitle": "Mantenimiento y Calibración de Laboratorio"
+    },
+    "tasks_title": "Tareas de Mantenimiento",
+    "tasks_subtitle": "tareas registradas",
+    "no_tasks": {
+      "title": "No hay tareas programadas",
+      "subtitle": "Crea una nueva tarea para comenzar"
+    },
+    "pending_tasks_title": "Tareas de Mantenimiento Pendientes",
+    "no_pending_tasks": "No hay tareas pendientes",
+    "add_new_task": "Añadir Nueva Tarea de Mantenimiento",
+    "not_found": {
+      "title": "Equipo No Encontrado",
+      "description": "El código QR es inválido o el equipo no existe."
+    },
+    "toast": {
+      "status_updated_title": "Estado Actualizado",
+      "status_updated_desc": "El estado de la tarea de mantenimiento se ha actualizado correctamente."
+    }
+  },
+  "export_dialog": {
+    "title": "Exportar Historial a Excel",
+    "description": "Selecciona el rango de fechas para exportar el historial de mantenimientos de equipos.",
+    "sheet_name": "Historial de Equipos",
+    "quick_ranges": "Rangos rápidos",
+    "select_range_title": "Seleccionar Rango de Fechas",
+    "info_alert": "Selecciona un rango rápido o define un periodo personalizado para generar el reporte.",
+    "ranges": {
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_3_months": "Últimos 3 meses",
+      "last_year": "Último año"
+    },
+    "start_date": "Fecha de inicio",
+    "end_date": "Fecha de fin",
+    "pick_a_date": "Elige una fecha",
+    "report_content_title": "Contenido del reporte",
+    "report_content_desc": "El archivo Excel incluirá: información del equipo, historial de mantenimientos, fechas de calibración, responsables y observaciones en el rango seleccionado.",
+    "download_button": "Descargar Excel",
+    "toast": {
+      "success_title": "Exportación Iniciada",
+      "success_desc": "El archivo de Excel se está descargando."
+    }
+  },
+  "import_page": {
+    "title": "Importar Equipos desde Excel",
+    "description": "Carga masiva de equipos usando archivos Excel (.xlsx, .xls).",
+    "back_button": "Volver a Equipos",
+    "instructions_title": "Instrucciones",
+    "info_alert": "Puedes importar equipos masivamente usando un archivo Excel. Descarga la plantilla para ver el formato requerido.",
+    "download_template": "Descargar Plantilla",
+    "template_sheet_name": "Plantilla de Equipos",
+    "drag_drop_text_1": "Selecciona un archivo Excel",
+    "drag_drop_text_2": "o arrástralo y suéltalo aquí",
+    "file_types": "Solo archivos .xlsx o .xls (máximo 10MB)",
+    "preview_title": "Vista Previa de Importación",
+    "preview_desc": "Revisa los datos a continuación antes de finalizar la importación. Solo se muestran las primeras 100 filas.",
+    "upload_to_preview": "Sube un archivo para ver la vista previa.",
+    "no_data_preview": "No se encontraron datos en el archivo o el formato es incorrecto.",
+    "import_button_text": "Importar Datos",
+    "errors": {
+      "invalid_file_title": "Archivo Inválido",
+      "invalid_file_desc": "Por favor, sube un archivo de Excel válido (.xlsx o .xls)."
+    },
+    "toast": {
+      "success_title": "Importación Exitosa",
+      "success_desc": "Se han añadido {count} nuevos equipos.",
+      "template_download_title": "Plantilla Descargada",
+      "template_download_desc": "La descarga de la plantilla de importación ha comenzado."
+    }
+  },
+  "notification_settings_dialog": {
+    "title": "Editar Configuración",
+    "active_label": "Notificación activa",
+    "days_before_label": "Días de antelación",
+    "days_before_desc": "Días antes del evento para enviar la notificación",
+    "recipients_label": "Direcciones de correo",
+    "add_button": "Agregar",
+    "add_recipient_placeholder": "Introduce un correo para añadir...",
+    "validation": {
+      "days_non_negative": "Los días deben ser un número positivo.",
+      "at_least_one_recipient": "Se requiere al menos un correo de destinatario.",
+      "invalid_email": "Por favor, introduce una dirección de correo válida."
+    },
+    "toast": {
+      "success_title": "Configuración Guardada",
+      "success_desc": "La configuración de la notificación ha sido actualizada.",
+      "invalid_email_title": "Correo Inválido"
+    }
+  },
+  "create_type": {
+      "title": "Título",
+      "description": "Descripción",
+      "new_notification": "Crear Nuevo Tipo de Notificación",
+      "new_type_of_notification": "Defina un nuevo tipo de notificación para el sistema.",
+      "title_placeholder": "Título visible para el usuario",
+      "description_placeholder": "Describe brevemente para qué es esta notificación."
+    }
+    
+}

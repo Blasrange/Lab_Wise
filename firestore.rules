@@ -1,0 +1,67 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    function getRole() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+
+    function isOneOfRoles(roles) {
+      return request.auth != null && getRole() in roles;
+    }
+
+    match /users/{userId} {
+      allow read, delete: if isOwner(userId) || isOneOfRoles(['Admin', 'Supervisor']);
+      allow create: if request.auth != null;
+      allow update: if isOwner(userId) || isOneOfRoles(['Admin', 'Supervisor']);
+    }
+    
+    match /users/{document=**} {
+      allow list: if request.auth != null;
+    }
+
+    match /equipment/{equipmentId} {
+      // Allow public get and list for QR code page functionality
+      allow get: if true;
+      allow list: if true;
+      // Only allow authenticated users to write
+      allow write: if request.auth != null;
+    }
+    
+    match /equipment-history/{historyId} {
+      // Allow public read and create for QR code page functionality
+      allow read, create: if true;
+      // Allow authenticated users to delete
+      allow delete: if request.auth != null;
+      // Allow anyone to update ONLY the 'status' field for the mobile QR view, or authenticated users to update anything
+      allow update: if request.auth == null && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status'])
+                    || request.auth != null;
+    }
+
+    match /activity-logs/{logId} {
+      // Allow anyone to create a log (for system errors from unauth users)
+      allow create: if true;
+      // Only authenticated users can read logs
+      allow read: if isOneOfRoles(['Admin']);
+      allow update, delete: if isOneOfRoles(['Admin']);
+    }
+
+    match /notification-logs/{logId} {
+        // Allow server-side processes (like Genkit flows) to create logs
+        allow create: if true;
+        // Only allow authenticated users to read/update/delete
+        allow read, update, delete: if request.auth != null;
+    }
+    
+    match /notification-settings/{settingId} {
+        // Only Admins and Supervisors can manage notification settings
+        allow read, write: if isOneOfRoles(['Admin', 'Supervisor']);
+    }
+  }
+}

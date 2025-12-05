@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "equipment-1",
+      "description": "A modern laboratory microscope.",
+      "imageUrl": "https://images.unsplash.com/photo-1614308457932-e16d85c5d053?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaWNyb3Njb3BlJTIwbGFifGVufDB8fHx8MTc2MzYwMzQ1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "microscope lab"
+    },
+    {
+      "id": "equipment-2",
+      "description": "A high-speed centrifuge for sample separation.",
+      "imageUrl": "https://images.unsplash.com/photo-1730387525836-16ea5e46eb19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZW50cmlmdWdlJTIwc2NpZW5jZXxlbnwwfHx8fDE3NjM2MDM0NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "centrifuge science"
+    },
+    {
+      "id": "equipment-3",
+      "description": "A digital spectrophotometer for measuring light absorbance.",
+      "imageUrl": "https://images.unsplash.com/photo-1657394404815-6e8d8b164edf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcGVjdHJvcGhvdG9tZXRlciUyMGFuYWx5c2lzfGVufDB8fHx8MTc2MzYwMzQ1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spectrophotometer analysis"
+    },
+    {
+      "id": "equipment-4",
+      "description": "A precision electronic balance for weighing chemicals.",
+      "imageUrl": "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWxhbmNlJTIwc2NhbGV8ZW58MHx8fHwxNzYzNjAzNDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "balance scale"
+    },
+    {
+      "id": "equipment-5",
+      "description": "A PCR thermocycler for DNA amplification.",
+      "imageUrl": "https://images.unsplash.com/photo-1658387575539-f433c725a086?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzY2llbmNlJTIwbWFjaGluZXxlbnwwfHx8fDE3NjM2MDM0NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science machine"
+    },
+    {
+      "id": "equipment-6",
+      "description": "An autoclave for sterilizing equipment.",
+      "imageUrl": "https://images.unsplash.com/photo-1758101512269-660feabf64fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdGVyaWxpemVyJTIwbWVkaWNhbHxlbnwwfHx8fDE3NjM2MDM0NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sterilizer medical"
+    }
+  ]
+}
